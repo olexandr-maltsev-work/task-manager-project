@@ -1,1 +1,1 @@
-CREATE DATABASE `taskmanager`;
+CREATE DATABASE `taskManager`;
