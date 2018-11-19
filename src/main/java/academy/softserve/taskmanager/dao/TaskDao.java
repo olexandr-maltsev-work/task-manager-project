@@ -22,6 +22,7 @@ public class TaskDao {
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setInt(1, task.getId());
         preparedStatement.setString(2, task.getDescription());
+        preparedStatement.executeUpdate();
     }
 
     public List<Task> getAllTasks() throws SQLException {
