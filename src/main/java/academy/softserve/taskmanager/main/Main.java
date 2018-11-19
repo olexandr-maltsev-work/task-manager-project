@@ -13,7 +13,7 @@ public class Main {
         task.setId(1);
         task.setDescription("Cool Task");
         try {
-            taskDao.saveTask(task);
+            taskDao.deleteTask(1);
 
             List<Task> allTasks = taskDao.getAllTasks();
             System.out.println(allTasks.toString());
