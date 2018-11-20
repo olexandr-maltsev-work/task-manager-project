@@ -5,6 +5,14 @@
         <meta charset="UTF-8">
         <title>Task List</title>
         <link href="resources/style.css" rel="stylesheet" type="text/css">
+
+        <script type="text/javascript">
+            function doDelete(id) {
+                if (confirm("This task well be deleted")) {
+                    window.location.href = "TaskDelete?taskId=" + id;
+                }
+            }
+        </script>
 </head>
 
 <body>
@@ -21,6 +29,10 @@
             <tr>
                 <td>${task.id}</td>
                 <td>${task.description}</td>
+                <td><a href="/taskEdit?taskId=${task.id}">edit</a>
+                    <a href="#" onclick="doDelete(${task.id})">delete</a>
+                </td>
+
             </tr>
         </c:forEach>
         </tbody>
