@@ -7,10 +7,10 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         TaskDao taskDao = new TaskDao();
         Task task = new Task();
-        task.setId(1);
+        task.setId(3);
         task.setDescription("Cool Task");
         try {
             taskDao.saveTask(task);

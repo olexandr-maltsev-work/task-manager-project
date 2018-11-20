@@ -13,7 +13,7 @@ public class TaskDao {
 
     private Connection connection;
 
-    public TaskDao() {
+    public TaskDao() throws Exception {
         connection = new DBConnection().getConnection();
     }
 
