@@ -9,7 +9,7 @@
 <h2>Task List</h2>
 
 <ul>
-    <li><a href = "tasks">Tasks</a></li>
+    <li><a href = "TaskServlet">Tasks</a></li>
     <li><a href = "about">About</a></li>
 </ul>
 </body>
