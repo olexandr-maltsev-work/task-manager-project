@@ -72,7 +72,7 @@ public class TaskDao {
 
     public void updateTask(Task task) throws SQLException {
         Task exist = getTaskById(task.getId());
-        task.setDescription(task.getDescription());
+        exist.setDescription(task.getDescription());
         deleteTask(task.getId());
         saveTask(exist);
     }

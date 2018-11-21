@@ -29,7 +29,7 @@
             <tr>
                 <td>${task.id}</td>
                 <td>${task.description}</td>
-                <td><a href="/taskEdit?taskId=${task.id}">edit</a>
+                <td><a href="/TaskEdit?taskId=${task.id}">edit</a>
                     <a href="#" onclick="doDelete(${task.id})">delete</a>
                 </td>
 
