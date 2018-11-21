@@ -33,9 +33,6 @@ public class TaskServlet extends HttpServlet {
         List<Task> tasks = new ArrayList<>();
         try {
             tasks.addAll(taskDao.getAllTasks());
-            for (Task task: tasks) {
-                System.out.println(task);
-            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
