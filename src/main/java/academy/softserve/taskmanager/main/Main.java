@@ -16,7 +16,6 @@ public class Main {
             taskDao.saveTask(task);
 
             List<Task> allTasks = taskDao.getAllTasks();
-            System.out.println(allTasks.toString());
         } catch (SQLException e) {
             e.printStackTrace();
         }

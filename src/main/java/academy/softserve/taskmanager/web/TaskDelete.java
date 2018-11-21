@@ -32,7 +32,7 @@ public class TaskDelete extends HttpServlet {
             } catch (SQLException e) {
                 req.getRequestDispatcher("WEB-INF/view/404.jsp").forward(req, resp);
             }
-            resp.sendRedirect("tasks");
+            resp.sendRedirect("TaskServlet");
         }
     }
 }
