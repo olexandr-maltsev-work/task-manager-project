@@ -19,6 +19,9 @@
 </head>
 
 <body>
+<p>Registration page:</p>
+<a href="RegisterServlet">Registration</a>
+
 <h2>Tasks</h2>
 <table>
     <thead>

@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <title>Edit the task </title>
 </head>
 <body>
 <h2>Task: ${task.description}</h2>
