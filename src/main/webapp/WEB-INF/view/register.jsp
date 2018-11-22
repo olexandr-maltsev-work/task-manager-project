@@ -6,16 +6,29 @@
     <title>Registration</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="resources/style.css">
 </head>
 <body>
-    <H2>Registration page</H2>
-    <form action="RegisterServlet" method="post">
-        <input type="text" name="email" value="" placeholder="Please enter email">
-        <input type="password" name="password" value="" placeholder="Please enter password">
-        <input type="password" name="password" value="" placeholder="Repeat the password">
-        <input type="text" name="Name" value="" placeholder="Please enter your name">
-        <input type="submit" value="Save user"/>
-    </form>
+<H2>Register</H2>
+<form action="RegisterServlet" method="post">
+    <p>Please fill in this form to create an account.</p>
+
+    <b>Email:</b><br>
+    <input type="text" name="email" placeholder="Enter Email" required>
+    <br>
+    <b>Password:</b><br>
+    <input type="password" name="password" placeholder="Enter password" required>
+    <br>
+    <b>Repeat Password:</b><br>
+    <input type="password" name="password" placeholder="Repeat password" required>
+    <br>
+    Name:<br>
+    <input type="text" name="Name" placeholder="Enter Your name">
+    <br>
+    <button type="submit" class="registerbtn">Register</button>
+    <br>
+
+</form>
 </body>
 
 <jsp:include page="footer.jsp"></jsp:include>
