@@ -4,9 +4,9 @@
 <head>
         <meta charset="UTF-8">
         <title>Task List</title>
-        <link href="resources/style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="resources/style.css">
 
-        <script type="text/javascript">
+    <script type="text/javascript">
             function doDelete(id) {
                 if (confirm("This task well be deleted")) {
                     window.location.href = "TaskDelete?taskId=" + id;
@@ -29,7 +29,7 @@
             <tr>
                 <td>${task.id}</td>
                 <td>${task.description}</td>
-                <td><a href="/TaskEdit?taskId=${task.id}">edit</a>
+                <td><a href="${pageContext.request.contextPath}/TaskEdit?taskId=${task.id}">edit</a>
                     <a href="#" onclick="doDelete(${task.id})">delete</a>
                 </td>
 
