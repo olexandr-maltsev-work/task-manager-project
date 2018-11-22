@@ -13,7 +13,7 @@ import java.io.IOException;
 @WebServlet("/TaskEdit")
 public class TaskEdit extends HttpServlet {
 
-    TaskDao taskDao;
+    private TaskDao taskDao;
 
     public TaskEdit() throws Exception {
         super();
@@ -47,7 +47,6 @@ public class TaskEdit extends HttpServlet {
         Task task = new Task();
         task.setId(Integer.parseInt(req.getParameter("id")));
         task.setDescription(req.getParameter("description"));
-        System.out.println(task);
         try {
             if (task.getId() == -1) {
                 taskDao.saveTask(task);
@@ -57,7 +56,6 @@ public class TaskEdit extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println(task);
         resp.sendRedirect("TaskServlet");
     }
 }

@@ -16,7 +16,7 @@ import java.util.List;
 @WebServlet("/TaskServlet")
 public class TaskServlet extends HttpServlet {
 
-    TaskDao taskDao;
+    private TaskDao taskDao;
 
     public TaskServlet() {
         super();

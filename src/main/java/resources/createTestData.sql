@@ -8,13 +8,13 @@ INSERT INTO `taskManager`.`task`
 VALUES (3, 'Realize Painting the fence dynamic algorithm');
 
 INSERT INTO `taskManager`.`task`
-VALUES (4, 'Realize Painting the fence dynamic algorithm');
+VALUES (4, 'Write unit tests for algorithms');
 
 INSERT INTO `taskManager`.`task`
-VALUES (5, 'Write unit tests for algorithms');
+VALUES (5, 'Prepare JDBC Demo');
 
 INSERT INTO `taskManager`.`task`
-VALUES (6, 'Prepare JDBC Demo');
+VALUES (6, 'Write Simple Web application (servlets, jdbc, mysql, jstl)');
 
 INSERT INTO `taskManager`.`task`
-VALUES (7, 'Write Simple Web application (servlets, jdbc, mysql, jstl');
+VALUES (7, 'Study Angular. Tutorial: Tour of Heroes');

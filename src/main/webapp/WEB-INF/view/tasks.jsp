@@ -37,5 +37,14 @@
         </c:forEach>
         </tbody>
     </table>
+
+    <div>
+        <h2>Create new task:</h2>
+        <form action="TaskCreate" method="post">
+            <input type="text" name="description" value="${task.description}" placeholder="enter description" />
+            <input type="submit" value="Create task"/>
+        </form>
+
+    </div>
 </body>
 </html>
