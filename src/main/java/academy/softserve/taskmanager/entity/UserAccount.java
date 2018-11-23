@@ -2,11 +2,20 @@ package academy.softserve.taskmanager.entity;
 
 public class UserAccount {
 
+    private int id;
     private String email;
     private String password;
     private String userName;
 
     public UserAccount() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getEmail() {
