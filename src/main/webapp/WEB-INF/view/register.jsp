@@ -1,4 +1,3 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <html>
@@ -9,8 +8,8 @@
     <link rel="stylesheet" type="text/css" href="resources/style.css">
 </head>
 <body>
-<H2>Register</H2>
-<form action="RegisterServlet" method="post">
+<h2>Register</h2>
+<form action="UserRegistration" method="post">
     <p>Please fill in this form to create an account.</p>
 
     <b>Email:</b><br>
@@ -20,7 +19,7 @@
     <input type="password" name="password" placeholder="Enter password" required>
     <br>
     <b>Repeat Password:</b><br>
-    <input type="password" name="password" placeholder="Repeat password" required>
+    <input type="password" name="confirmPassword" placeholder="Repeat password" required>
     <br>
     Name:<br>
     <input type="text" name="Name" placeholder="Enter Your name">
