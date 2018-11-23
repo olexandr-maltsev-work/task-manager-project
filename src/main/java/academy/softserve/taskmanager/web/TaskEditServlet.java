@@ -11,11 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/TaskEdit")
-public class TaskEdit extends HttpServlet {
+public class TaskEditServlet extends HttpServlet {
 
     private TaskDao taskDao;
 
-    public TaskEdit() throws Exception {
+    public TaskEditServlet() throws Exception {
         super();
         taskDao = new TaskDao();
     }

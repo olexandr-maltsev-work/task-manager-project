@@ -12,11 +12,11 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 @WebServlet("/TaskCreate")
-public class TaskCreate extends HttpServlet {
+public class TaskCreateServlet extends HttpServlet {
 
     private TaskDao taskDao;
 
-    public TaskCreate() throws Exception {
+    public TaskCreateServlet() throws Exception {
         super();
         taskDao = new TaskDao();
     }
