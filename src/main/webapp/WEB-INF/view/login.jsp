@@ -19,5 +19,7 @@
     <button type="submit" class="registerbtn">Login</button>
     <br>
 </form>
+<br>
+<a href="UserRegistrationServlet">Not registered yet?</a>
 </body>
 </html>

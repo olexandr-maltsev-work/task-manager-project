@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -32,9 +33,11 @@ public class UserLoginServlet extends HttpServlet {
             try {
                 UserAccount userAccount = userAccountDao.getUserAccount(email, password);
                 if (userAccount != null) {
+                    HttpSession session = request.getSession(true);
+                    String userName = userAccount.getUserName();
+                    session.setAttribute("userName", userName);
                     UserSession.addToSession(userAccount.getEmail(), request);
                 }
-
                 response.sendRedirect("TaskServlet");
             } catch (SQLException e) {
                 e.printStackTrace();
