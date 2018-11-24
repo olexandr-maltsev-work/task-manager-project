@@ -22,7 +22,7 @@
     <input type="password" name="confirmPassword" placeholder="Repeat password" required>
     <br>
     Name:<br>
-    <input type="text" name="Name" placeholder="Enter Your name">
+    <input type="text" name="userName" placeholder="Enter Your name">
     <br>
     <button type="submit" class="registerbtn">Register</button>
     <br>
