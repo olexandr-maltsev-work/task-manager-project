@@ -2,6 +2,7 @@ package academy.softserve.taskmanager.web;
 
 import academy.softserve.taskmanager.dao.UserAccountDao;
 import academy.softserve.taskmanager.entity.UserAccount;
+import academy.softserve.taskmanager.security.UserSession;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,7 +31,10 @@ public class UserLoginServlet extends HttpServlet {
         if (email != null && !email.isEmpty() && password != null && !password.isEmpty()) {
             try {
                 UserAccount userAccount = userAccountDao.getUserAccount(email, password);
-                System.out.println(userAccount);
+                if (userAccount != null) {
+                    UserSession.addToSession(userAccount.getEmail(), request);
+                }
+
                 response.sendRedirect("TaskServlet");
             } catch (SQLException e) {
                 e.printStackTrace();
