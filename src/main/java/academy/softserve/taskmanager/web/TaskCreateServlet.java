@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet("/TaskCreate")
+@WebServlet("/TaskCreateServlet")
 public class TaskCreateServlet extends HttpServlet {
 
     private TaskDao taskDao;

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet("/UserRegistration")
+@WebServlet("/UserRegistrationServlet")
 public class UserRegistrationServlet extends HttpServlet {
 
     private UserAccountDao userAccountDao;

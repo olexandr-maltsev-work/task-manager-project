@@ -12,7 +12,7 @@
     <script type="text/javascript">
         function doDelete(id) {
             if (confirm("This task well be deleted")) {
-                window.location.href = "TaskDelete?taskId=" + id;
+                window.location.href = "TaskDeleteServlet?taskId=" + id;
             }
         }
     </script>
@@ -33,7 +33,7 @@
         <tr>
             <td>${task.id}</td>
             <td>${task.description}</td>
-            <td><a href="${pageContext.request.contextPath}/TaskEdit?taskId=${task.id}">edit</a>
+            <td><a href="${pageContext.request.contextPath}/TaskEditServlet?taskId=${task.id}">edit</a>
                 <a href="#" onclick="doDelete(${task.id})">delete</a>
             </td>
 
@@ -44,7 +44,7 @@
 
 <div>
     <h2>Create new task:</h2>
-    <form action="TaskCreate" method="post">
+    <form action="TaskCreateServlet" method="post">
         <input type="text" name="description" value="${task.description}" placeholder="enter description"/>
         <input type="submit" value="Create task"/>
     </form>

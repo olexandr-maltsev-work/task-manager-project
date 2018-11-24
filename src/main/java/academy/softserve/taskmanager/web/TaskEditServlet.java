@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/TaskEdit")
+@WebServlet("/TaskEditServlet")
 public class TaskEditServlet extends HttpServlet {
 
     private TaskDao taskDao;

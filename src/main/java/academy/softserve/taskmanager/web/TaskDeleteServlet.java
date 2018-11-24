@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet("/TaskDelete")
+@WebServlet("/TaskDeleteServlet")
 public class TaskDeleteServlet extends HttpServlet {
 
     private TaskDao taskDao;

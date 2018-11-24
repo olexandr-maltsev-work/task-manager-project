@@ -9,7 +9,7 @@
 </head>
 <body>
 <h2>Register</h2>
-<form action="UserRegistration" method="post">
+<form action="UserRegistrationServlet" method="post">
     <p>Please fill in this form to create an account.</p>
 
     <b>Email:</b><br>
