@@ -25,7 +25,7 @@ public class UserAccountDao {
     }
 
     public UserAccount getUserAccount(String email, String password) throws SQLException {
-        String sql = "SELECT id, email, password, user_name FROM user_account where email = ? and password = ?";
+        String sql = "SELECT id, email, password, user_name FROM userAccount where email = ? and password = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, email);
         preparedStatement.setString(2, password);
@@ -42,7 +42,7 @@ public class UserAccountDao {
     }
 
     public boolean isUserExist(String email) throws SQLException {
-        String sql = "SELECT id FROM user_account where email = ?";
+        String sql = "SELECT id FROM userAccount where email = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, email);
         ResultSet resultSet = preparedStatement.executeQuery();
