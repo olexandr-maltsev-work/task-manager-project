@@ -23,7 +23,7 @@ public class TaskServletFilter implements Filter {
 
         String userId = (String) attribute;
         if (!UserSession.isSessionValid(userId, httpServletRequest)) {
-            request.getRequestDispatcher("WEB-INF/view/404.jsp").forward(request, response);
+            request.getRequestDispatcher("WEB-INF/view/login.jsp").forward(request, response);
             return;
         }
 
