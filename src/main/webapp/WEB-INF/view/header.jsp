@@ -1,4 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+
+<body>
 <div style="float: right; padding: 10px; text-align: right;">
-    <a href="UserLoginServlet">Login</a> <a href="UserRegistrationServlet">Registration</a>
+    Hello, <%= session.getAttribute("userName") %>!
 </div>
+
+</body>
+</html>

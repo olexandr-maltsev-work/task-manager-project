@@ -22,8 +22,8 @@
         <b>Repeat Password:</b><br>
         <input type="password" name="confirmPassword" placeholder="Repeat password" required>
         <br>
-        Name:<br>
-        <input type="text" name="userName" placeholder="Enter Your name">
+        <b>Name:</b><br>
+        <input type="text" name="userName" placeholder="Enter Your name" required>
         <br>
         <button type="submit" class="registerbtn">Register</button>
         <br>
