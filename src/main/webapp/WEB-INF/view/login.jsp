@@ -8,18 +8,21 @@
 </head>
 
 <body>
-<h2>Login</h2>
-<form action="UserLoginServlet" method="post">
-    <b>Email:</b><br>
-    <input type="text" name="email" placeholder="Enter Email" required>
+<div class="form-style-2">
+    <h2>Login</h2>
+    <form action="UserLoginServlet" method="post">
+        <b>Email:</b><br>
+        <input type="text" name="email" placeholder="Enter Email" required>
+        <br>
+        <b>Password:</b><br>
+        <input type="password" name="password" placeholder="Enter password" required>
+        <br>
+        <button type="submit">Login</button>
+        <br>
+    </form>
     <br>
-    <b>Password:</b><br>
-    <input type="password" name="password" placeholder="Enter password" required>
-    <br>
-    <button type="submit" class="registerbtn">Login</button>
-    <br>
-</form>
-<br>
-<a href="UserRegistrationServlet">Not registered yet?</a>
+    <a href="UserRegistrationServlet">Not registered yet?</a>
+
+</div>
 </body>
 </html>

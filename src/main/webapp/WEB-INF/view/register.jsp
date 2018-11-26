@@ -9,25 +9,28 @@
 </head>
 <body>
 <h2>Register</h2>
-<form action="UserRegistrationServlet" method="post">
-    <p>Please fill in this form to create an account.</p>
+<div class="form-style-2">
+    <form action="UserRegistrationServlet" method="post">
+        <p>Please fill in this form to create an account.</p>
 
-    <b>Email:</b><br>
-    <input type="text" name="email" placeholder="Enter Email" required>
-    <br>
-    <b>Password:</b><br>
-    <input type="password" name="password" placeholder="Enter password" required>
-    <br>
-    <b>Repeat Password:</b><br>
-    <input type="password" name="confirmPassword" placeholder="Repeat password" required>
-    <br>
-    Name:<br>
-    <input type="text" name="userName" placeholder="Enter Your name">
-    <br>
-    <button type="submit" class="registerbtn">Register</button>
-    <br>
+        <b>Email:</b><br>
+        <input type="text" name="email" placeholder="Enter Email" required>
+        <br>
+        <b>Password:</b><br>
+        <input type="password" name="password" placeholder="Enter password" required>
+        <br>
+        <b>Repeat Password:</b><br>
+        <input type="password" name="confirmPassword" placeholder="Repeat password" required>
+        <br>
+        Name:<br>
+        <input type="text" name="userName" placeholder="Enter Your name">
+        <br>
+        <button type="submit" class="registerbtn">Register</button>
+        <br>
 
-</form>
+    </form>
+
+</div>
 </body>
 
 <jsp:include page="footer.jsp"></jsp:include>

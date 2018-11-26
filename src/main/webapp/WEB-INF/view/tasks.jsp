@@ -42,6 +42,7 @@
     </tbody>
 </table>
 
+<br>
 <div>
     <h2>Create new task:</h2>
     <form action="TaskCreateServlet" method="post">
