@@ -7,7 +7,7 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
-@WebFilter("/TaskServlet")
+@WebFilter(urlPatterns = { "/TaskServlet", "/TaskCreateServlet", "/TaskEditServlet", "/TaskDeleteServlet"})
 public class TaskServletFilter implements Filter {
 
     public void destroy() {
