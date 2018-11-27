@@ -8,22 +8,32 @@
     <link rel="stylesheet" type="text/css" href="resources/style.css">
 </head>
 <body>
+
+<c:if test="${not empty userdto.message}">
+    <div>
+        <label>
+                ${userdto.message}
+        </label>
+    </div>
+</c:if>
+
 <h2>Register</h2>
 <div class="form-style-2">
     <form action="UserRegistrationServlet" method="post">
         <p>Please fill in this form to create an account.</p>
 
         <b>Email:</b><br>
-        <input type="text" name="email" placeholder="Enter Email" required>
+        <input type="text" name="email" value="${userdto.email}" placeholder="Enter Email" required>
         <br>
         <b>Password:</b><br>
-        <input type="password" name="password" placeholder="Enter password" required>
+        <input type="password" name="password" value="${userdto.password}" placeholder="Enter password" required>
         <br>
         <b>Repeat Password:</b><br>
-        <input type="password" name="confirmPassword" placeholder="Repeat password" required>
+        <input type="password" name="confirmPassword" value="${userdto.confirmPassword}" placeholder="Repeat password"
+               required>
         <br>
         <b>Name:</b><br>
-        <input type="text" name="userName" placeholder="Enter Your name" required>
+        <input type="text" name="userName" value="${userdto.name}" placeholder="Enter Your name" required>
         <br>
         <button type="submit" class="registerbtn">Register</button>
         <br>
