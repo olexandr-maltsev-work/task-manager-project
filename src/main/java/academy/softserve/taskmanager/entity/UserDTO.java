@@ -65,16 +65,4 @@ public class UserDTO {
     public void setError(boolean error) {
         this.error = error;
     }
-
-    @Override
-    public String toString() {
-        return "UserDTO{" +
-                "email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", confirmPassword='" + confirmPassword + '\'' +
-                ", name='" + name + '\'' +
-                ", message='" + message + '\'' +
-                ", error=" + error +
-                '}';
-    }
 }

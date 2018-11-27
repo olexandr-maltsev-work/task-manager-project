@@ -62,7 +62,6 @@ public class UserRegistrationServlet extends HttpServlet {
         } else {
             userDTO.setMessage(errorMessage);
             userDTO.setError(true);
-            System.out.println(userDTO);
         }
         req.setAttribute("userDTO", userDTO);
         doGet(req, resp);
@@ -88,7 +87,6 @@ public class UserRegistrationServlet extends HttpServlet {
         }
 
         if (!userDTO.getPassword().equals(userDTO.getConfirmPassword())) {
-            System.out.println(userDTO);
             return "Passwords are not match";
         }
 

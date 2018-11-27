@@ -41,14 +41,4 @@ public class UserAccount {
     public void setUserName(String userName) {
         this.userName = userName;
     }
-
-    @Override
-    public String toString() {
-        return "UserAccount{" +
-                "id=" + id +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", userName='" + userName + '\'' +
-                '}';
-    }
 }

@@ -32,7 +32,6 @@ public class TaskCreateServlet extends HttpServlet {
                 int id = taskDao.getNewId();
                 task.setId(id);
                 task.setDescription(description);
-                System.out.println(task);
                 taskDao.saveTask(task);
             }
         } catch (SQLException e) {
