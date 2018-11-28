@@ -185,6 +185,30 @@ input[type=text]:focus, input[type=password]:focus {
     color: #fff;
 }
 
-#errorMessage{
+#errorMessage {
     color: red;
+}
+
+.bg {
+    background-image: url("/images/goodbye.jpg");
+
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: white;
+}
+
+.bg a:link {
+    color: AliceBlue;
+}
+
+.bg a:visited {
+    color: DarkBlue;
+}
+
+.bg a:hover {
+    color: DarkGray;
 }
