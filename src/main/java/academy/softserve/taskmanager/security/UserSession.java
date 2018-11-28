@@ -8,9 +8,9 @@ public class UserSession {
 
     private static Map<String, String> userSession = new HashMap<>();
 
-    public static void addToSession(String userId, HttpServletRequest request) {
-        userSession.put(userId, request.getSession().getId());
-        request.getSession().setAttribute("user", userId);
+    public static void addToSession(String email, HttpServletRequest request) {
+        userSession.put(email, request.getSession().getId());
+        request.getSession().setAttribute("email", email);
     }
 
     public static void clearSession(String userId) {

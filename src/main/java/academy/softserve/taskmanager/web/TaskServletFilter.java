@@ -15,7 +15,7 @@ public class TaskServletFilter implements Filter {
 
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
         HttpServletRequest httpServletRequest = ((HttpServletRequest) request);
-        Object attribute = httpServletRequest.getSession().getAttribute("user");
+        Object attribute = httpServletRequest.getSession().getAttribute("email");
         if (attribute == null) {
             request.getRequestDispatcher("WEB-INF/view/login.jsp").forward(request, response);
             return;

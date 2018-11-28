@@ -17,7 +17,7 @@ public class LogOutServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession(false);
         if (session != null) {
-            String userName = (String) session.getAttribute("user");
+            String userName = (String) session.getAttribute("email");
             UserSession.clearSession(userName);
         }
         req.getRequestDispatcher("WEB-INF/view/goodbye.jsp").forward(req, resp);
