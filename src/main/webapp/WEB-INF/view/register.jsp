@@ -10,14 +10,14 @@
 <body>
 
 <c:if test="${not empty userdto.message}">
-    <div>
-        <label>
+    <div id="errorMessage">
+        <h3>
                 ${userdto.message}
-        </label>
+        </h3>
     </div>
 </c:if>
 
-<h2>Register</h2>
+<h2>Registration form</h2>
 <div class="form-style-2">
     <form action="UserRegistrationServlet" method="post">
         <p>Please fill in this form to create an account.</p>

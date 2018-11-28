@@ -184,3 +184,7 @@ input[type=text]:focus, input[type=password]:focus {
     background: #EA7B00;
     color: #fff;
 }
+
+#errorMessage{
+    color: red;
+}
