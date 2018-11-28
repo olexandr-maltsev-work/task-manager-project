@@ -1,6 +1,7 @@
 package academy.softserve.taskmanager.dao;
 
 import academy.softserve.taskmanager.entity.UserAccount;
+import academy.softserve.taskmanager.security.PasswordEncryption;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -25,10 +26,11 @@ public class UserAccountDao {
     }
 
     public UserAccount getUserAccount(String email, String password) throws SQLException {
+        String enryptedPassword = PasswordEncryption.encryptWithMD5(password);
         String sql = "SELECT id, email, password, user_name FROM userAccount where email = ? and password = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, email);
-        preparedStatement.setString(2, password);
+        preparedStatement.setString(2, enryptedPassword);
         ResultSet resultSet = preparedStatement.executeQuery();
         if (resultSet.next()) {
             UserAccount userAccount = new UserAccount();
