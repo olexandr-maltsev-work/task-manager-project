@@ -6,9 +6,9 @@
           crossorigin="anonymous">
 </head>
 <body>
-    <div>
-        <p align="center">© 2018 Copyright: Good Task Manager</p>
-    </div>
+<div>
+    <p align="center">© 2018 Copyright: Good Task Manager</p>
+</div>
 
 </body>
 </html>
