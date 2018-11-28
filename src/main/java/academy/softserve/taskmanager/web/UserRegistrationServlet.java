@@ -23,8 +23,6 @@ public class UserRegistrationServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        checkUserDTO(req);
-        UserDTO userDTO = (UserDTO) req.getAttribute("userdto");
         req.getRequestDispatcher("WEB-INF/view/register.jsp").forward(req, resp);
     }
 
@@ -67,7 +65,6 @@ public class UserRegistrationServlet extends HttpServlet {
     }
 
     private String validate(UserDTO userDTO) throws SQLException {
-
         if (userDTO.getEmail().isEmpty()) {
             return "Please, fill email";
         }

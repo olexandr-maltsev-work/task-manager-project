@@ -33,41 +33,40 @@ public class UserLoginServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String errorMessage = "";
-        if (email != null && !email.isEmpty() && password != null && !password.isEmpty()) {
-            userDTO.setEmail(email);
-            userDTO.setPassword(password);
-
-            try {
-                errorMessage = validate(userDTO);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-
-            if (!errorMessage.isEmpty()) {
-                userDTO.setMessage(errorMessage);
-                userDTO.setError(true);
-                request.setAttribute("userDTO", userDTO);
-                doGet(request, response);
-            }
-
-            try {
-                UserAccount userAccount = userAccountDao.getUserAccount(email, password);
-                if (userAccount != null) {
-                    HttpSession session = request.getSession(true);
-                    String userName = userAccount.getUserName();
-                    session.setAttribute("userName", userName);
-                    UserSession.addToSession(userAccount.getEmail(), request);
-                }
-                response.sendRedirect("TaskServlet");
-            } catch (SQLException e) {
-                e.printStackTrace();
-                request.getRequestDispatcher("WEB-INF/view/404.jsp").forward(request, response);
-
-            }
-        } else {
+        if (email == null || email.isEmpty() || password == null || password.isEmpty()) {
             userDTO.setMessage(errorMessage);
             userDTO.setError(true);
             doGet(request, response);
+        }
+
+        userDTO.setEmail(email);
+        userDTO.setPassword(password);
+
+        try {
+            errorMessage = validate(userDTO);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        if (!errorMessage.isEmpty()) {
+            userDTO.setMessage(errorMessage);
+            userDTO.setError(true);
+            request.setAttribute("userDTO", userDTO);
+            doGet(request, response);
+        }
+
+        try {
+            UserAccount userAccount = userAccountDao.getUserAccount(email, password);
+            if (userAccount != null) {
+                HttpSession session = request.getSession(true);
+                String userName = userAccount.getUserName();
+                session.setAttribute("userName", userName);
+                UserSession.addToSession(userAccount.getEmail(), request);
+            }
+            response.sendRedirect("TaskServlet");
+        } catch (SQLException e) {
+            e.printStackTrace();
+            request.getRequestDispatcher("WEB-INF/view/404.jsp").forward(request, response);
         }
     }
 
