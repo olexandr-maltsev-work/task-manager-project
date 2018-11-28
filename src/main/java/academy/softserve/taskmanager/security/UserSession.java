@@ -1,6 +1,5 @@
 package academy.softserve.taskmanager.security;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;

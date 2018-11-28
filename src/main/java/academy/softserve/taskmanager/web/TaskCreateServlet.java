@@ -1,7 +1,7 @@
 package academy.softserve.taskmanager.web;
 
 import academy.softserve.taskmanager.dao.TaskDao;
-import academy.softserve.taskmanager.entity.Task;
+import academy.softserve.taskmanager.entity.dbo.Task;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

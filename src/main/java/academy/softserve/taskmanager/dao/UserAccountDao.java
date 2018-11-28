@@ -1,6 +1,6 @@
 package academy.softserve.taskmanager.dao;
 
-import academy.softserve.taskmanager.entity.UserAccount;
+import academy.softserve.taskmanager.entity.dbo.UserAccount;
 import academy.softserve.taskmanager.security.PasswordEncryption;
 
 import java.sql.Connection;

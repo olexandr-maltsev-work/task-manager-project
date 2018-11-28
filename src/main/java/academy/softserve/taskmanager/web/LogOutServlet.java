@@ -1,6 +1,5 @@
 package academy.softserve.taskmanager.web;
 
-import academy.softserve.taskmanager.entity.UserAccount;
 import academy.softserve.taskmanager.security.UserSession;
 
 import javax.servlet.ServletException;

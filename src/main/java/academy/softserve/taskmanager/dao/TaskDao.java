@@ -1,6 +1,6 @@
 package academy.softserve.taskmanager.dao;
 
-import academy.softserve.taskmanager.entity.Task;
+import academy.softserve.taskmanager.entity.dbo.Task;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

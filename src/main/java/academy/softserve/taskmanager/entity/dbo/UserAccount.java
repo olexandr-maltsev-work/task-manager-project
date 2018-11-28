@@ -1,4 +1,4 @@
-package academy.softserve.taskmanager.entity;
+package academy.softserve.taskmanager.entity.dbo;
 
 import academy.softserve.taskmanager.security.PasswordEncryption;
 
@@ -33,7 +33,7 @@ public class UserAccount {
     }
 
     public void setPassword(String password) {
-        this.password = PasswordEncryption.encryptWithMD5(password) ;
+        this.password = PasswordEncryption.encryptWithMD5(password);
     }
 
     public String getUserName() {

@@ -1,8 +1,8 @@
 package academy.softserve.taskmanager.web;
 
 import academy.softserve.taskmanager.dao.UserAccountDao;
-import academy.softserve.taskmanager.entity.UserAccount;
-import academy.softserve.taskmanager.entity.UserDTO;
+import academy.softserve.taskmanager.entity.dbo.UserAccount;
+import academy.softserve.taskmanager.entity.dto.UserDTO;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -97,7 +97,7 @@ public class UserRegistrationServlet extends HttpServlet {
             return "This email is already registered";
         }
 
-            return "";
+        return "";
     }
 
     private void checkUserDTO(HttpServletRequest req) {

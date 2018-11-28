@@ -1,4 +1,4 @@
-package academy.softserve.taskmanager.entity;
+package academy.softserve.taskmanager.entity.dbo;
 
 public class Task {
 
@@ -21,11 +21,4 @@ public class Task {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "Task{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                '}';
-    }
 }

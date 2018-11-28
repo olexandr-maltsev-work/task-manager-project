@@ -1,4 +1,4 @@
-package academy.softserve.taskmanager.entity;
+package academy.softserve.taskmanager.entity.dto;
 
 public class UserDTO {
 

@@ -1,8 +1,8 @@
 package academy.softserve.taskmanager.web;
 
 import academy.softserve.taskmanager.dao.UserAccountDao;
-import academy.softserve.taskmanager.entity.UserAccount;
-import academy.softserve.taskmanager.entity.UserDTO;
+import academy.softserve.taskmanager.entity.dbo.UserAccount;
+import academy.softserve.taskmanager.entity.dto.UserDTO;
 import academy.softserve.taskmanager.security.UserSession;
 
 import javax.servlet.ServletException;
