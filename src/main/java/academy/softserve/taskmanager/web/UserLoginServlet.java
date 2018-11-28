@@ -2,6 +2,7 @@ package academy.softserve.taskmanager.web;
 
 import academy.softserve.taskmanager.dao.UserAccountDao;
 import academy.softserve.taskmanager.entity.UserAccount;
+import academy.softserve.taskmanager.entity.UserDTO;
 import academy.softserve.taskmanager.security.UserSession;
 
 import javax.servlet.ServletException;
@@ -27,9 +28,28 @@ public class UserLoginServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        checkUserLoginDTO(request);
+        UserDTO userDTO = (UserDTO) request.getAttribute("userdto");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
+        String errorMessage = "";
         if (email != null && !email.isEmpty() && password != null && !password.isEmpty()) {
+            userDTO.setEmail(email);
+            userDTO.setPassword(password);
+
+            try {
+                errorMessage = validate(userDTO);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+            if (!errorMessage.isEmpty()) {
+                userDTO.setMessage(errorMessage);
+                userDTO.setError(true);
+                request.setAttribute("userDTO", userDTO);
+                doGet(request, response);
+            }
+
             try {
                 UserAccount userAccount = userAccountDao.getUserAccount(email, password);
                 if (userAccount != null) {
@@ -44,7 +64,29 @@ public class UserLoginServlet extends HttpServlet {
                 request.getRequestDispatcher("WEB-INF/view/404.jsp").forward(request, response);
 
             }
+        } else {
+            userDTO.setMessage(errorMessage);
+            userDTO.setError(true);
+            doGet(request, response);
         }
     }
 
+    private String validate(UserDTO userDTO) throws SQLException {
+        if (!userAccountDao.isUserExist(userDTO.getEmail())) {
+            return "Email <b>" + userDTO.getEmail() + "</b> does not exist";
+        }
+
+        UserAccount userAccount = userAccountDao.getUserAccount(userDTO.getEmail(), userDTO.getPassword());
+        if (userAccount == null) {
+            return "Password is not correct";
+        }
+        return "";
+    }
+
+    private void checkUserLoginDTO(HttpServletRequest request) {
+        if (request.getAttribute("userdto") == null) {
+            UserDTO userDTO = new UserDTO();
+            request.setAttribute("userdto", userDTO);
+        }
+    }
 }

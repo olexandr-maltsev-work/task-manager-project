@@ -51,7 +51,6 @@ public class UserRegistrationServlet extends HttpServlet {
             userAccount.setUserName(userDTO.getName());
             try {
                 userAccountDao.createUserAccount(userAccount);
-                userDTO.setMessage("User successfully created");
                 userDTO.setError(false);
                 req.getRequestDispatcher("WEB-INF/view/login.jsp").forward(req, resp);
             } catch (SQLException e) {

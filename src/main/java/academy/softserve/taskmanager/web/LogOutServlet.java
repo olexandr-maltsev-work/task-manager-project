@@ -20,7 +20,6 @@ public class LogOutServlet extends HttpServlet {
         if (session != null) {
             String userName = (String) session.getAttribute("user");
             UserSession.clearSession(userName);
-            session.invalidate();
         }
         req.getRequestDispatcher("WEB-INF/view/goodbye.jsp").forward(req, resp);
     }
